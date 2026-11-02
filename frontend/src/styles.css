@@ -1,0 +1,23 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1f2937;
+  background: #f8fafc;
+}
+body { margin: 0; }
+.container { max-width: 760px; margin: 0 auto; padding: 48px 16px; }
+h1 { margin: 0; color: #1f3a5f; }
+.subtitle { margin-top: 4px; color: #6b7280; }
+.ask-form { display: flex; gap: 8px; margin: 24px 0; }
+.ask-form input {
+  flex: 1; padding: 12px; font-size: 16px;
+  border: 1px solid #cbd5e1; border-radius: 8px;
+}
+.ask-form button {
+  padding: 12px 20px; font-size: 16px; border: 0; border-radius: 8px;
+  background: #1f3a5f; color: #fff; cursor: pointer;
+}
+.ask-form button:disabled { opacity: 0.6; cursor: wait; }
+.answer { background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; }
+.answer p { white-space: pre-wrap; line-height: 1.6; }
+.score { color: #6b7280; font-size: 14px; }
+.error { color: #b91c1c; }

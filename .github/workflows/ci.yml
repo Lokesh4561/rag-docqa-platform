@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install lint and test tools
+        run: pip install ruff==0.8.4 pytest==8.3.4 openai==1.58.1 python-dotenv==1.0.1
+      - name: Lint
+        run: ruff check .
+      - name: Unit tests
+        run: pytest -q
