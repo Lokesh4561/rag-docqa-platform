@@ -1,0 +1,8 @@
+{"question": "What are the three layers of the medallion architecture?", "expected_title": "medallion_architecture"}
+{"question": "What does the silver layer contain?", "expected_title": "medallion_architecture"}
+{"question": "Why should ingestion pipelines be idempotent?", "expected_title": "idempotent_pipelines"}
+{"question": "How can a MERGE statement prevent duplicate rows on rerun?", "expected_title": "idempotent_pipelines"}
+{"question": "What is change data capture?", "expected_title": "change_data_capture"}
+{"question": "How does log-based CDC read changes from a database?", "expected_title": "change_data_capture"}
+{"question": "What is retrieval augmented generation?", "expected_title": "retrieval_augmented_generation"}
+{"question": "Why do RAG systems split documents into chunks?", "expected_title": "retrieval_augmented_generation"}

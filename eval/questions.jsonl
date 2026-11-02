@@ -1,8 +1,98 @@
-{"question": "What are the three layers of the medallion architecture?", "expected_title": "medallion_architecture"}
-{"question": "What does the silver layer contain?", "expected_title": "medallion_architecture"}
-{"question": "Why should ingestion pipelines be idempotent?", "expected_title": "idempotent_pipelines"}
-{"question": "How can a MERGE statement prevent duplicate rows on rerun?", "expected_title": "idempotent_pipelines"}
-{"question": "What is change data capture?", "expected_title": "change_data_capture"}
-{"question": "How does log-based CDC read changes from a database?", "expected_title": "change_data_capture"}
-{"question": "What is retrieval augmented generation?", "expected_title": "retrieval_augmented_generation"}
-{"question": "Why do RAG systems split documents into chunks?", "expected_title": "retrieval_augmented_generation"}
+{"question": "What are the three operations that a MapReduce framework typically consists of, as described in the passage?", "expected_title": "mapreduce", "generated": true}
+{"question": "Which open-source implementation of MapReduce is mentioned in the passage as having support for distributed shuffles?", "expected_title": "mapreduce", "generated": true}
+{"question": "Which modules are part of the base Apache Hadoop framework?", "expected_title": "apache_hadoop", "generated": true}
+{"question": "In what year was Hadoop 0.1.0 released?", "expected_title": "apache_hadoop", "generated": true}
+{"question": "What are the four steps in the Dimensional modeling design method described in the passage?", "expected_title": "dimensional_modeling", "generated": true}
+{"question": "According to the passage, why does Dimensional modeling use conformed dimensions?", "expected_title": "dimensional_modeling", "generated": true}
+{"question": "What is a common technique used in Idempotent Data Pipelines to prevent duplicate rows when rerunning the same batch?", "expected_title": "idempotent_pipelines", "generated": true}
+{"question": "Which method is suggested for proving idempotency in Idempotent Data Pipelines according to the passage?", "expected_title": "idempotent_pipelines", "generated": true}
+{"question": "According to the passage, what is the throughput of a pipeline consisting of three stations that take 20, 10, and 15 minutes respectively, compared to a single station performing all tasks?", "expected_title": "pipeline_computing", "generated": true}
+{"question": "According to the passage, what are the example stages listed for a classic RISC instruction pipeline?", "expected_title": "pipeline_computing", "generated": true}
+{"question": "What is the time complexity of linear search for nearest neighbor search as described in the passage?", "expected_title": "nearest_neighbor_search", "generated": true}
+{"question": "Which application field listed in the passage uses nearest neighbor search for point cloud registration?", "expected_title": "nearest_neighbor_search", "generated": true}
+{"question": "What is the architectural foundation of Apache Spark?", "expected_title": "apache_spark", "generated": true}
+{"question": "Which cluster managers are supported by Apache Spark for cluster management?", "expected_title": "apache_spark", "generated": true}
+{"question": "What are the five components of the data governance framework published by Vijay Khatri and Carol V. Brown in 2010?", "expected_title": "data_governance", "generated": true}
+{"question": "Which organization is developing the Data Governance and Management Profile for data governance as of May 2026?", "expected_title": "data_governance", "generated": true}
+{"question": "According to the passage, what does the adjective 'deep' refer to in deep learning?", "expected_title": "deep_learning", "generated": true}
+{"question": "Which deep learning network architectures are listed in the passage?", "expected_title": "deep_learning", "generated": true}
+{"question": "What are the two most common representations of Data orientation mentioned in the passage?", "expected_title": "data_orientation", "generated": true}
+{"question": "Which Data orientation is more commonly used in online transaction processing (OLTP) according to the passage?", "expected_title": "data_orientation", "generated": true}
+{"question": "What are the primary components of an event-driven architecture?", "expected_title": "event_driven_architecture", "generated": true}
+{"question": "What is the role of event channels in an event-driven architecture?", "expected_title": "event_driven_architecture", "generated": true}
+{"question": "What are the three phases of the ETL process described in the passage?", "expected_title": "extract_transform_load", "generated": true}
+{"question": "Which data source formats are mentioned as common in the ETL extraction phase?", "expected_title": "extract_transform_load", "generated": true}
+{"question": "What is the term used to describe NoSQL databases' ability to scale across clusters of machines?", "expected_title": "nosql", "generated": true}
+{"question": "Which NoSQL database is mentioned as including ACID transaction support as a key feature?", "expected_title": "nosql", "generated": true}
+{"question": "According to the passage, what are the three methods used to capture changes on rows in CDC, and how can they be combined for a powerful mechanism?", "expected_title": "change_data_capture", "generated": true}
+{"question": "Why does the passage state that CDC cannot use row-level versioning to find all changes unless it knows the original starting version of every row?", "expected_title": "change_data_capture", "generated": true}
+{"question": "What are the reasons for Master data management (MDM) listed in the passage?", "expected_title": "master_data_management", "generated": true}
+{"question": "How does business unit and product line segmentation lead to data redundancy and confusion in Master data management (MDM) according to the passage?", "expected_title": "master_data_management", "generated": true}
+{"question": "What programming language is Kubernetes written in?", "expected_title": "kubernetes", "generated": true}
+{"question": "Which companies announced native support for Kubernetes in 2017?", "expected_title": "kubernetes", "generated": true}
+{"question": "What are the main advantages of microservices architecture as described in the passage?", "expected_title": "microservices", "generated": true}
+{"question": "According to the passage, what role do circuit breakers play within and between cells in a cell-based architecture?", "expected_title": "microservices", "generated": true}
+{"question": "What are the key goals of OLTP applications as described in the passage?", "expected_title": "online_transaction_processing", "generated": true}
+{"question": "Which types of queries does OLTP handle that OLAP generally does not support?", "expected_title": "online_transaction_processing", "generated": true}
+{"question": "What programming languages can be used with App Engine on Google Cloud?", "expected_title": "google_cloud_platform", "generated": true}
+{"question": "Which Google Cloud product provides a fully managed PostgreSQL database service?", "expected_title": "google_cloud_platform", "generated": true}
+{"question": "What large language model was introduced by OpenAI in 2024 that generates long chains of thought before returning a final answer?", "expected_title": "large_language_model", "generated": true}
+{"question": "Which large language model was praised in 2023 for its increased accuracy and multimodal capabilities?", "expected_title": "large_language_model", "generated": true}
+{"question": "What happens to layers that are not being fine-tuned during Fine-tuning (deep learning)?", "expected_title": "fine_tuning_deep_learning", "generated": true}
+{"question": "How does low-rank adaptation (LoRA) reduce the number of parameters required for Fine-tuning (deep learning)?", "expected_title": "fine_tuning_deep_learning", "generated": true}
+{"question": "In which year did HashiCorp launch Terraform?", "expected_title": "terraform_software", "generated": true}
+{"question": "What license did HashiCorp announce for all its products, including Terraform, in August 2023?", "expected_title": "terraform_software", "generated": true}
+{"question": "When was Snowflake Inc. founded and who were its founders?", "expected_title": "snowflake_inc", "generated": true}
+{"question": "Which cloud platforms has Snowflake Inc. run on, and in which years did it begin operating on each?", "expected_title": "snowflake_inc", "generated": true}
+{"question": "When was Microsoft Azure officially launched as Windows Azure?", "expected_title": "microsoft_azure", "generated": true}
+{"question": "What is the name of the Microsoft Azure service that allows users to synchronize on-premises directories and enable Single Sign On?", "expected_title": "microsoft_azure", "generated": true}
+{"question": "According to the passage, what are the dimensions of data quality?", "expected_title": "data_quality", "generated": true}
+{"question": "Which international standard for data quality is mentioned in the passage?", "expected_title": "data_quality", "generated": true}
+{"question": "When did Apache Airflow become a top-level Apache Software Foundation project?", "expected_title": "apache_airflow", "generated": true}
+{"question": "Which vendors offer managed Apache Airflow services?", "expected_title": "apache_airflow", "generated": true}
+{"question": "According to the passage, how does the NIST Special Publication 800-122 define personally identifiable information (PII)?", "expected_title": "personal_data", "generated": true}
+{"question": "What does the passage state about the scope of the term 'personal data' under the General Data Protection Regulation (GDPR) compared to the term 'PII' in the United States?", "expected_title": "personal_data", "generated": true}
+{"question": "What is the scope of a data mart as described in the passage?", "expected_title": "data_mart", "generated": true}
+{"question": "What modeling approach is commonly implemented for a data mart to facilitate analytics?", "expected_title": "data_mart", "generated": true}
+{"question": "What are the three challenges of distributed systems mentioned in the passage on Distributed computing?", "expected_title": "distributed_computing", "generated": true}
+{"question": "According to the passage on Distributed computing, why do distributed systems cost more than monolithic architectures?", "expected_title": "distributed_computing", "generated": true}
+{"question": "According to the passage, what are the distinct types of metadata listed under the 'Types' section?", "expected_title": "metadata", "generated": true}
+{"question": "Which type of metadata, as defined in the passage, is used to describe the structure of database objects such as tables, columns, keys, and indexes?", "expected_title": "metadata", "generated": true}
+{"question": "What are the three key principles that characterize DevOps according to the passage?", "expected_title": "devops", "generated": true}
+{"question": "Which new metric was introduced in the 2024 State of DevOps report to measure the proportion of unplanned deployments made to fix user-visible issues?", "expected_title": "devops", "generated": true}
+{"question": "What open-source project did Databricks develop that adds ACID transaction support to data lakes?", "expected_title": "databricks", "generated": true}
+{"question": "Which generative AI startup did Databricks acquire for $1.4 billion in June?", "expected_title": "databricks", "generated": true}
+{"question": "What is a vector database, as defined in the passage?", "expected_title": "vector_database", "generated": true}
+{"question": "Which technique is mentioned in the passage as having among the best performers in recent benchmarks for vector databases?", "expected_title": "vector_database", "generated": true}
+{"question": "What does the term 'soft-state' refer to in the context of BASE semantics for eventual consistency?", "expected_title": "eventual_consistency", "generated": true}
+{"question": "Which conflict resolution strategy is described as 'last writer wins' in the passage?", "expected_title": "eventual_consistency", "generated": true}
+{"question": "According to the ISO/IEC 22123-2 definition, what responsibilities does Serverless computing remove from the customer?", "expected_title": "serverless_computing", "generated": true}
+{"question": "Which modern solutions are cited in the passage as mitigating the challenges of monitoring and debugging Serverless computing applications?", "expected_title": "serverless_computing", "generated": true}
+{"question": "What are the three issues that Ryan Blue set out to address when creating Apache Iceberg?", "expected_title": "apache_iceberg", "generated": true}
+{"question": "Which file format does Apache Iceberg use for storing actual data?", "expected_title": "apache_iceberg", "generated": true}
+{"question": "What are the two main workflows for building a data warehouse system?", "expected_title": "data_warehouse", "generated": true}
+{"question": "Which type of database management system is preferred for analytics databases in a data warehouse?", "expected_title": "data_warehouse", "generated": true}
+{"question": "What interval does cosine similarity always belong to according to the passage?", "expected_title": "cosine_similarity", "generated": true}
+{"question": "What are the alternative names for cosine similarity mentioned in the passage?", "expected_title": "cosine_similarity", "generated": true}
+{"question": "According to the CAP theorem, what are the two guarantees that a distributed data store can provide when a network partition occurs?", "expected_title": "cap_theorem", "generated": true}
+{"question": "Which NoSQL databases are mentioned in the passage as examples of AP databases under the CAP theorem?", "expected_title": "cap_theorem", "generated": true}
+{"question": "What are the major processing tasks in a Natural language processing system mentioned in the passage?", "expected_title": "natural_language_processing", "generated": true}
+{"question": "Which natural language processing system, developed between 1964 and 1966, simulated Rogerian psychotherapy?", "expected_title": "natural_language_processing", "generated": true}
+{"question": "At which levels can Object storage be implemented?", "expected_title": "object_storage", "generated": true}
+{"question": "Which company played a central role in the development of Object storage?", "expected_title": "object_storage", "generated": true}
+{"question": "According to the passage, what alternative terms are used for 'Hallucination (artificial intelligence)' in the literature?", "expected_title": "hallucination_artificial_intelligence", "generated": true}
+{"question": "Which high\u2011stakes scenarios does the passage identify as being particularly affected by hallucinations in AI systems?", "expected_title": "hallucination_artificial_intelligence", "generated": true}
+{"question": "What percentage of the cloud infrastructure market share did Amazon Web Services hold as of 2023 Q1 according to Synergy Research Group?", "expected_title": "amazon_web_services", "generated": true}
+{"question": "Which Amazon Web Services product allows users to run serverless functions that can be triggered by hundreds of events, including HTTP calls?", "expected_title": "amazon_web_services", "generated": true}
+{"question": "What are the five different kinds of data validation described in the passage?", "expected_title": "data_validation", "generated": true}
+{"question": "Which type of data validation verifies that the individual characters provided through user input are consistent with the expected characters of one or more known primitive data types?", "expected_title": "data_validation", "generated": true}
+{"question": "Which operating systems are explicitly mentioned as supported by PostgreSQL in the passage?", "expected_title": "postgresql", "generated": true}
+{"question": "In what year did the PostgreSQL project rename itself from POSTGRES to reflect its support for SQL?", "expected_title": "postgresql", "generated": true}
+{"question": "What type of data is stored in the bronze layer of the Medallion Architecture?", "expected_title": "medallion_architecture", "generated": true}
+{"question": "Which layer of the Medallion Architecture holds business-level aggregates and dimensional models?", "expected_title": "medallion_architecture", "generated": true}
+{"question": "According to the passage, what is the historical origin of the term 'batch processing'?", "expected_title": "batch_processing", "generated": true}
+{"question": "Which early computer monitors are cited in the passage as examples of batch processing systems?", "expected_title": "batch_processing", "generated": true}
+{"question": "What are the four objectives of Database normalization beyond 1NF as stated by Codd?", "expected_title": "database_normalization", "generated": true}
+{"question": "What are the three types of anomalies that can arise when a relation is not sufficiently normalized in Database normalization?", "expected_title": "database_normalization", "generated": true}
+{"question": "What were the three design goals specified by Linus Torvalds for Git?", "expected_title": "git", "generated": true}
+{"question": "On what date did Linus Torvalds announce the Git project?", "expected_title": "git", "generated": true}

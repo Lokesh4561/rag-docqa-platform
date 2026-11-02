@@ -1,0 +1,37 @@
+Eventual consistency
+
+Eventual consistency is a consistency model used in distributed computing to achieve high availability. An eventually consistent system ensures that if no new updates are made to a given data item, eventually all read accesses to that item will return the last updated value. Eventual consistency, also called optimistic replication, is widely deployed in distributed systems and has origins in early mobile computing projects. A system that has achieved eventual consistency is said to have converged, or achieved replica convergence. Eventual consistency is a weak guarantee – most stronger models, like linearizability, are trivially eventually consistent.
+Eventually-consistent services are often classified as providing BASE semantics (basically-available, soft-state, eventual consistency), in contrast to traditional ACID (atomicity, consistency, isolation, durability). The rough definitions of each term in BASE are:
+
+Basically available: it is the database's concurrent accessibility by users at all times. One user doesn't need to wait for others to finish the transaction before updating the record.
+Soft-state: refers to the notion that data can have transient or temporary states that may change over time, even without external triggers or inputs. Thus, even without further external updates, until an update converges, it is possible that different queries for a record see different values.
+Eventually consistent: this means the record will achieve consistency when all the concurrent updates have been completed. At this point, applications querying the record will see the same value.
+Eventual consistency faces criticism for adding complexity to distributed software applications. This complexity arises because eventual consistency provides only a liveness guarantee (ensuring reads eventually return the same value) without safety guarantees—allowing any intermediate value before convergence. Application developers find this challenging because it differs from single-threaded programming, where variables reliably return their assigned values immediately. With weak consistency guarantees, developers must carefully consider these limitations, as incorrect assumptions about consistency levels can lead to subtle bugs that only surface during network failures or high concurrency.
+
+
+== Conflict resolution ==
+In order to ensure replica convergence, a system must reconcile differences between multiple copies of distributed data. This consists of two parts:
+
+exchanging versions or updates of data between servers (often known as anti-entropy); and
+choosing an appropriate final state when concurrent updates have occurred, called reconciliation.
+The most appropriate approach to reconciliation depends on the application.  A widespread approach is "last writer wins".  Another is to invoke a user-specified conflict handler. Timestamps and vector clocks are often used to detect concurrency between updates. Some people use "first writer wins" in situations where "last writer wins" is unacceptable.
+Reconciliation of concurrent writes must occur sometime before the next read, and can be scheduled at different instants:
+
+Read repair: The correction is done when a read finds an inconsistency. This slows down the read operation.
+Write repair: The correction takes place during a write operation, slowing down the write operation.
+Asynchronous repair: The correction is not part of a read or write operation.
+
+
+== Strong eventual consistency ==
+Whereas eventual consistency is only a liveness guarantee (updates will be observed eventually), strong eventual consistency (SEC) adds the safety guarantee that any two nodes that have received the same (unordered) set of updates will be in the same state. A common approach to ensure SEC is conflict-free replicated data types.
+
+
+== See also ==
+CAP theorem
+
+
+== References ==
+
+
+== Further reading ==
+Burckhardt, Sebastian (2014-10-09). "Principles of Eventual Consistency". Foundations and Trends in Programming Languages. 1 (1–2): 1–150. doi:10.1561/2500000011. ISSN 2325-1107.

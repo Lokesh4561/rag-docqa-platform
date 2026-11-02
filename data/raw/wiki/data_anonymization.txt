@@ -1,0 +1,59 @@
+Data anonymization
+
+Data anonymization is a type of information sanitization whose intent is privacy protection. It is the process of removing personally identifiable information from data sets, so that the people whom the data describe remain anonymous.
+
+
+== Overview ==
+Data anonymization has been defined as a "process by which personal data is altered in such a way that a data subject can no longer be identified directly or indirectly, either by the data controller alone or in collaboration with any other party." Data anonymization may enable the transfer of information across a boundary, such as between two departments within an agency or between two agencies, while reducing the risk of unintended disclosure, and in certain environments in a manner that enables evaluation and analytics post-anonymization.
+In the context of medical data, anonymized data refers to data from which the patient cannot be identified by the recipient of the information. The name, address, and full postcode must be removed, together with any other information which, in conjunction with other data held by or disclosed to the recipient, could identify the patient.
+There will always be a risk that anonymized data may not  stay anonymous over time. Pairing the anonymized dataset with other data,  clever techniques and raw power are some of the ways previously anonymous data sets have become de-anonymized; The data subjects are no longer anonymous.
+De-anonymization is the reverse process in which anonymous data is cross-referenced with other data sources to re-identify the anonymous data source. 
+Generalization and perturbation are the two popular anonymization approaches for relational data.  The process of obscuring data with the ability to re-identify it later is also called pseudonymization and is one way companies can store data in a way that is HIPAA compliant.
+However, according to ARTICLE 29 DATA PROTECTION WORKING PARTY, Directive 95/46/EC refers to anonymisation in Recital 26 "signifies that to anonymise any data, the data must be stripped of sufficient elements such that the data subject can no longer be identified. More precisely, that data must be processed in such a way that it can no longer be used to identify a natural person by using “all the means likely reasonably to be used” by either the controller or a third party. An important factor is that the processing must be irreversible. The Directive does not clarify how such a de-identification process should or could be performed. The focus is on the outcome: that data should be such as not to allow the data subject to be identified via “all” “likely” and “reasonable” means. Reference is made to codes of conduct as a tool to set out possible anonymisation mechanisms as well as retention in a form in which identification of the data subject is “no longer possible”.
+There are five types of data anonymization operations: generalization, suppression, anatomization, permutation, and perturbation.
+
+
+== GDPR requirements ==
+The European Union's General Data Protection Regulation (GDPR) requires that stored data on people in the EU undergo either anonymization or a pseudonymization process. GDPR Recital (26) establishes a very high bar for what constitutes anonymous data, thereby exempting the data from the requirements of the GDPR, namely “…information which does not relate to an identified or identifiable natural person or to personal data rendered anonymous in such a manner that the data subject is not or no longer identifiable.” The European Data Protection Supervisor (EDPS) and the Spanish Agencia Española de Protección de Datos (AEPD) have issued joint guidance related to requirements for anonymity and exemption from GDPR requirements. According to the EDPS and AEPD, no one, including the data controller, should be able to re-identify data subjects in a properly anonymized dataset. Research by data scientists at Imperial College in London and UCLouvain in Belgium, as well as a ruling by Judge Michal Agmon-Gonen of the Tel Aviv District Court, highlight the shortcomings of "Anonymisation" in today's big data world. Anonymisation reflects an outdated approach to data protection that was developed when the processing of data was limited to isolated (siloed) applications, prior to the popularity of big data processing involving the widespread sharing and combining of data.
+
+
+== Anonymization of different types of data ==
+Structured data:
+
+Databases
+Unstructured data:
+
+PDF files - Anonymization of text, tables, images, scanned pages.
+DICOM - Anonymization metadata, pixel data, overlay data, encapsulated documents.
+Images
+Removing identifying metadata from computer files is important for anonymizing them. Metadata removal tools are useful for achieving this.
+
+
+== See also ==
+Anonymity
+De-anonymization
+De-identification
+Differential privacy
+Fillet (redaction)
+Geo-Blocking
+k-anonymity
+l-diversity
+Masking and unmasking by intelligence agencies
+Metadata removal tool
+Pseudonymization
+Statistical disclosure control
+
+
+== References ==
+
+
+== Further reading ==
+Raghunathan, Balaji (June 2013). The Complete Book of Data Anonymization: From Planning to Implementation. CRC Press. ISBN 9781482218565.
+Khaled El Emam, Luk Arbuckle (August 2014). Anonymizing Health Data: Case Studies and Methods to Get You Started. O'Reilly Media. ISBN 978-1-4493-6307-9.
+Rolf H. Weber, Ulrike I. Heinrich (2012). Anonymization: SpringerBriefs in Cybersecurity. Springer. ISBN 9781447140665.
+Aris Gkoulalas-Divanis, Grigorios Loukides (2012). Anonymization of Electronic Medical Records to Support Clinical Analysis (SpringerBriefs in Electrical and Computer Engineering). Springer. ISBN 9781461456674.
+Pete Warden. "Why you can't really anonymize your data". O'Reilly Media, Inc. Archived from the original on 9 January 2014. Retrieved 17 January 2014.
+
+
+== External links ==
+On the anonymization of Internet traffic: Data Sharing and Anonymization Reading List

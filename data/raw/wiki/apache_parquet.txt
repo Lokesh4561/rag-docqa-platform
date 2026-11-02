@@ -1,0 +1,56 @@
+Apache Parquet
+
+Apache Parquet is a free and open-source column-oriented data storage format in the Apache Hadoop ecosystem inspired by Google Dremel interactive ad-hoc query system for analysis of read-only nested data. It is similar to RCFile and ORC, the other columnar-storage file formats in Hadoop, and is compatible with most of the data processing frameworks around Hadoop. It provides data compression and encoding schemes with enhanced performance to handle complex data in bulk.
+
+
+== History ==
+The open-source project to build Apache Parquet began as a joint effort between Twitter and Cloudera using the record shredding and assembly algorithm as described in Google's Dremel. Parquet was designed as an improvement on the Trevni columnar storage format created by Doug Cutting, the creator of Hadoop. The name 'parquet' (lit. 'small compartment') refers to a style of decorative flooring and was chosen to "evoke the bottom layer of a database with an interesting layout". The first version, Apache Parquet 1.0, was released in July 2013. Since April 27, 2015, Apache Parquet has been a top-level Apache Software Foundation (ASF)-sponsored project.
+
+
+== Features ==
+Apache Parquet is implemented using the record-shredding and assembly algorithm, which accommodates the complex data structures that can be used to store data. The values in each column are stored in contiguous memory locations, providing the following benefits:
+
+Column-wise compression is efficient in storage space
+Encoding and compression techniques specific to the type of data in each column can be used
+Queries that fetch specific column values need not read the entire row, thus improving performance
+Apache Parquet is implemented using the Apache Thrift framework, which increases its flexibility; it can work with a number of programming languages like C++, Java, Python, PHP, etc.
+As of August 2015, Parquet supports the big-data-processing frameworks including Apache Hive, Apache Drill, Apache Impala, Apache Crunch, Apache Pig, Cascading, Presto and Apache Spark. It is one of the external data formats used by the pandas Python data manipulation and analysis library.
+
+
+== Compression and encoding ==
+In Parquet, compression is performed column by column, which enables different encoding schemes to be used for text and integer data. This strategy also keeps the door open for newer and better encoding schemes to be implemented as they are invented.
+Parquet supports various compression formats: snappy, gzip, LZO, brotli, zstd, and LZ4.
+
+
+=== Dictionary encoding ===
+Parquet has an automatic dictionary encoding enabled dynamically for data with a small number of unique values (i.e. below 105) that enables significant compression and boosts processing speed.
+
+
+=== Bit packing ===
+Storage of integers is usually done with dedicated 32 or 64 bits per integer. For small integers, packing multiple integers into the same space makes storage more efficient.
+
+
+=== Run-length encoding (RLE) ===
+To optimize storage of multiple occurrences of the same value, run-length encoding is used, which is where a single value is stored once along with the number of occurrences.
+Parquet implements a hybrid of bit packing and RLE, in which the encoding switches based on which produces the best compression results. This strategy works well for certain types of integer data and combines well with dictionary encoding.
+
+
+== Cloud Storage and Data Lakes ==
+Parquet is widely used as the underlying file format in modern cloud-based data lake architectures. Cloud storage systems such as Amazon S3, Azure Data Lake Storage, and Google Cloud Storage commonly store data in Parquet format due to its efficient columnar representation and retrieval capabilities. Data lakehouse frameworks—including Apache Iceberg, Delta Lake, and Apache Hudi —build an additional metadata layer on top of Parquet files to support features such as schema evolution, time-travel queries, and ACID-compliant transactions. In these architectures, Parquet files serve as the immutable storage layer while the table formats manage data versioning and transactional integrity.
+
+
+== Comparison ==
+Apache Parquet is comparable to RCFile and Optimized Row Columnar (ORC) file formats — all three fall under the category of columnar data storage within the Hadoop ecosystem. They all have better compression and encoding with improved read performance at the cost of slower writes. In addition to these features, Apache Parquet supports limited schema evolution, i.e., the schema can be modified according to the changes in the data. It also provides the ability to add new columns and merge schemas that do not conflict.
+Apache Arrow is designed as an in-memory complement to on-disk columnar formats like Parquet and ORC. The Arrow and Parquet projects include libraries that allow for reading and writing between the two formats.
+
+
+== See also ==
+
+
+== References ==
+
+
+== External links ==
+Official website 
+The Parquet Format and Performance Optimization Opportunities on YouTube
+Dremel paper

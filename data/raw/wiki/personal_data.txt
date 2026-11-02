@@ -1,0 +1,187 @@
+Personal data
+
+Personal data, also known as personal information or personally identifiable information (PII), is any information related to an identifiable person.
+The abbreviation PII is widely used in the United States, but the phrase it abbreviates has four common variants based on personal or personally, and identifiable or identifying. Not all are equivalent, and for legal purposes the effective definitions vary depending on the jurisdiction and the purposes for which the term is being used. Under European Union and United Kingdom data protection regimes, which centre primarily on the General Data Protection Regulation (GDPR), the term "personal data" is significantly broader, and determines the scope of the regulatory regime.
+National Institute of Standards and Technology Special Publication 800-122 defines personally identifiable information as "any information about an individual maintained by an agency, including (1) any information that can be used to distinguish or trace an individual's identity, such as name, social security number, date and place of birth, mother's maiden name, or biometric records; and (2) any other information that is linked or linkable to an individual, such as medical, educational, financial, and employment information." For instance, a user's IP address is not classed as PII on its own, but is classified as a linked PII.
+Personal data is defined under the GDPR as "any information which [is] related to an identified or identifiable natural person". The IP address of an Internet subscriber may be classed as personal data.
+The concept of PII has become prevalent as information technology and the Internet have made it easier to collect PII leading to a profitable market in collecting and reselling PII. PII can also be exploited by criminals to stalk or steal the identity of a person, or to aid in the planning of criminal acts. As a response to these threats, many website privacy policies specifically address the gathering of PII, and lawmakers such as the European Parliament have enacted a series of legislative acts such as the GDPR to limit the distribution and accessibility of PII.
+Serious confusion arises around whether PII means information which is identifiable (that is, can be associated with a person) or identifying (that is, associated uniquely with a person, such that the PII identifies them). In prescriptive data privacy regimes such as the US federal Health Insurance Portability and Accountability Act (HIPAA), PII items have been specifically defined. In broader data protection regimes such as the GDPR, personal data is defined in a non-prescriptive principles-based way. Information that might not count as PII under HIPAA can be personal data for the purposes of GDPR. For this reason, "PII" is typically deprecated internationally.
+
+
+== Definitions ==
+The U.S. government used the term "personally identifiable" in 2007 in a memorandum from the Executive Office of the President, Office of Management and Budget (OMB), and that usage now appears in US standards such as the NIST Guide to Protecting the Confidentiality of Personally Identifiable Information (SP 800-122). The OMB memorandum defines PII as follows:
+
+Information that can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or recognizing linked or linkable information, such as date and place of birth, as well as the mother's maiden name, in official standards like the NIST Guide, demonstrates a proactive approach to ensuring robust privacy safeguards amid the dynamic landscape of data security. This integration into established standards is a foundational framework for organizations to adopt and implement effective measures in safeguarding individuals' personal information.
+A term similar to PII, "personal data", is defined in EU directive 95/46/EC, for the purposes of the directive:
+
+Article 2a: 'personal data' shall mean any information relating to an identified or identifiable natural person ('data subject'); an identifiable person is one who can be identified, directly or indirectly, in particular by reference to an identification number or to one or more factors specific to his physical, physiological, mental, economic, cultural or social identity;
+In the EU rules, there has been a more specific notion that the data subject can potentially be identified through additional processing of other attributes—quasi- or pseudo-identifiers. In the GDPR, personal data is defined as:
+
+Any information relating to an identified or identifiable natural person ('data subject'); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person
+A simple example of this distinction: the color name "red" by itself is not personal data, but that same value stored as part of a person's record as their "favorite color" is personal data; it is the connection to the person that makes it personal data, not (as in PII) the value itself.
+Another term similar to PII, "personal information", is defined in a section of the California data breach notification law, SB1386:
+
+(e) For purposes of this section, "personal information" means an individual's first name or first initial and last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted:  (1) Social security number. (2) Driver's license number or California Identification Card number. (3) Account number, credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual's financial account. (f) For purposes of this section, "personal information" does not include publicly available information that is lawfully made available to the general public from federal, state, or local government records.
+The concept of information combination given in the SB1386 definition is key to correctly distinguishing PII, as defined by OMB, from "personal information", as defined by SB1386.  Information, such as a name, that lacks context cannot be said to be SB1386 "personal information", but it must be said to be PII as defined by OMB. For example, the name "John Smith" has no meaning in the current context and is therefore not SB1386 "personal information", but it is PII. A Social Security Number (SSN) without a name or some other associated identity or context information is not SB1386 "personal information", but it is PII. For example, the SSN 078-05-1120 by itself is PII, but it is not SB1386 "personal information". However the combination of a valid name with the correct SSN is SB1386 "personal information".
+The combination of a name with a context may also be considered PII; for example, if a person's name is on a list of patients for an HIV clinic. However, it is not necessary for the name to be combined with a context in order for it to be PII. The reason for this distinction is that bits of information such as names, although they may not be sufficient by themselves to make an identification, may later be combined with other information to identify persons and expose them to harm.
+The scope of the term "sensitive personal data" varies by jurisdiction. In the UK, personal health data is treated as "sensitive" and in need of additional data protection measures. According to the OMB, in the United States it is not always the case that PII is "sensitive", and context may be taken into account in deciding whether certain PII is or is not sensitive.
+When a person wishes to remain anonymous, descriptions of them will often employ several of the above, such as "a 34-year-old white male who works at Target". Information can still be private, in the sense that a person may not wish for it to become publicly known, without being personally identifiable. Moreover, sometimes multiple pieces of information, none sufficient by itself to uniquely identify an individual, may uniquely identify a person when combined; this is one reason that multiple pieces of evidence are usually presented at criminal trials. It has been shown that, in 1990, 87% of the population of the United States could be uniquely identified by gender, ZIP code, and full date of birth.
+In hacker and Internet slang, the practice of finding and releasing such information is called "doxing". It is sometimes used to deter collaboration with law enforcement. On occasion, the doxing can trigger an arrest, particularly if law enforcement agencies suspect that the "doxed" individual may panic and disappear.
+
+
+== Laws and standards ==
+
+
+=== Australia ===
+In Australia, the Privacy Act 1988 deals with the protection of individual privacy, using the OECD Privacy Principles from the 1980s to set up a broad, principles-based regulatory model (unlike in the US, where coverage is generally not based on broad principles but on specific technologies, business practices or data items). Section 6 has the relevant definition. The critical detail is that the definition of 'personal information' also applies to where the individual can be indirectly identified:
+
+"personal information" means information or an opinion about an identified individual, or an individual who is reasonably identifiable whether the information or opinion is true or not; and whether the information or opinion is recorded in a material form or not. 
+It appears that this definition is significantly broader than the Californian example given above, and thus that Australian privacy law may cover a broader category of data and information than in some US law.
+In particular, online behavioral advertising businesses based in the US but surreptitiously collecting information from people in other countries in the form of cookies, bugs, trackers and the like may find that their preference to avoid the implications of wanting to build a psychographic profile of a particular person using the rubric of 'we don't collect personal information' may find that this does not make sense under a broader definition like that in the Australian Privacy Act.
+The term "PII" is not used in Australian privacy law.
+
+
+=== Canada ===
+The Privacy Act governs the federal government agencies.
+The Ontario Freedom of Information and Protection of Privacy Act and similar provincial legislation governs provincial government agencies.
+The Personal Information Protection and Electronic Documents Act governs private corporations, unless there is equivalent provincial legislation.
+Ontario Personal Health Information Protection Act and other similar provincial legislation govern health information.
+
+
+=== European Union ===
+European Union data protection law does not use the concept of personally identifiable information, and its scope is instead determined by the non-synonymous, wider concept of "personal data".
+
+Article 8 of the European Convention on Human Rights
+Convention for the Protection of Individuals with Regard to Automatic Processing of Personal Data
+The General Data Protection Regulation adopted in April 2016; effective 25 May 2018
+supersedes the Data Protection Directive, 95/46/EC
+The Directive on Privacy and Electronic Communications, 2002/58/EC (the E-Privacy Directive)
+The Data Retention Directive, 2006/24/EC, Article 5
+Further examples can be found on the EU privacy website.
+
+
+=== Hong Kong ===
+On 1 June 2023, the Hong Kong Office of the Privacy Commissioner for Personal Data published an investigation report on a data breach involving the unauthorised access of a credit reference database platform. The Report highlights the need for organizations to take adequate steps to protect personal data as the mere imposition of contractual obligations and policies is insufficient if such obligations and policies are not effective or are not enforced. The Report also clarifies that credit data is a form of "sensitive" personal data.
+
+
+=== United Kingdom ===
+The Data Protection Act 2018, which in part implements the GDPR
+supersedes the Data Protection Act 1998
+UK GDPR, retained EU law, substantially the same as the EU GDPR with necessary amendments due to Brexit
+Article 8 of the European Convention on Human Rights
+The Regulation of Investigatory Powers Act 2000
+Employers' Data Protection Code of Practice
+Model Contracts for Data Exports
+The Privacy and Electronic Communications (EC Directive) Regulations 2003
+The Telecommunications (Lawful Business Practice) (Interception of Communications) Regulations 2000
+The Anti-Terrorism, Crime and Security Act 2001
+
+
+=== New Zealand ===
+The twelve Information Privacy Principles of the Privacy Act 1993 apply. New Zealand enacted the Privacy Act in 2020 to promote and protect individual privacy.
+
+
+=== Switzerland ===
+The Federal Act on Data Protection of 19 June 1992 (in force since 1993) has set up a protection of privacy by prohibiting virtually any processing of personal data which is not expressly authorized by the data subjects. The protection is subject to the authority of the Federal Data Protection and Information Commissioner.
+Additionally, any person may ask in writing a company managing data files to correct or delete any personal data. The company must respond within thirty days.
+
+
+=== United States ===
+The Privacy Act of 1974 (Pub.L. 93–579, 88 Stat. 1896, enacted 31 December 1974, 5 U.S.C. § 552a), a United States federal law, establishes a Code of Fair Information Practice that governs the collection, maintenance, use, and dissemination of personally identifiable information about individuals that is maintained in systems of records by federal agencies.
+One of the primary focuses of the Health Insurance Portability and Accountability Act (HIPAA) is to protect a patient's Protected Health Information (PHI), which is similar to PII. The U.S. Senate proposed the Privacy Act of 2005, which attempted to strictly limit the display, purchase, or sale of PII without the person's consent. Similarly, the (proposed) Anti-Phishing Act of 2005 attempted to prevent the acquiring of PII through phishing.
+U.S. lawmakers have paid special attention to the social security number because it can be easily used to commit identity theft. The (proposed) Social Security Number Protection Act of 2005 and (proposed) Identity Theft Prevention Act of 2005 each sought to limit the distribution of an individual's social security number.
+Additional U.S.-specific personally identifiable information includes, but is not limited to, I-94 records, Medicaid ID numbers, and Internal Revenue Service (I.R.S.) documentation. Exclusivity of personally identifiable information affiliated with the U.S. highlights national data security concerns and the influence of personally identifiable information in U.S. federal data management systems.
+
+
+==== State laws and significant court rulings ====
+California
+The California state constitution declares privacy an inalienable right in Article 1, Section 1.
+Online Privacy Protection Act (OPPA) of 2003
+SB 1386 requires organizations to notify individuals when PII (in combination with one or more additional, specific data elements) is known or believed to be acquired by an unauthorized person.
+In 2011, the California State Supreme Court ruled that a person's ZIP code is PII.
+Nevada
+Nevada Revised Statutes 603A – Security of Personal Information
+Massachusetts
+201 CMR 17.00: Standards for the Protection of Personal Information of Residents of the Commonwealth
+In 2013, the Massachusetts Supreme Court ruled that ZIP codes are PII.
+
+
+==== Federal law ====
+18 U.S.C. § 1028(d)(7)
+The Privacy Act of 1974, codified at 5 U.S.C. § 552a et seq.
+EU–US Data Privacy Framework, EU harmonisation, adopted on 10 July 2023
+supersedes the EU–US Privacy Shield, which was ruled invalid by the European Court of Justice in 2020
+
+
+=== NIST definition ===
+The National Institute of Standards and Technology (NIST) is a physical sciences laboratory, and a non-regulatory agency of the United States Department of Commerce. Its mission is to promote innovation and industrial competitiveness.
+The following data, often used for the express purpose of distinguishing individual identity, clearly classify as personally identifiable information under the definition used by the NIST (described in detail below):
+
+National identification number (e.g., Social Security number in the U.S.)
+Bank account numbers
+Passport number
+Driver's license number
+Debit/credit card numbers
+The following are less often used to distinguish individual identity, because they are traits shared by many people. However, they are potentially PII, because they may be combined with other personal information to identify an individual.
+
+Full name
+Home address
+City
+State
+Postcode
+Country
+Telephone
+Age, date of birth, especially if non-specific
+Gender or race
+Web cookie
+
+
+== Forensics ==
+In forensics, particularly the identification and prosecution of criminals, personally identifiable information is critical in establishing evidence in criminal procedure. Criminals may go to great trouble to avoid leaving any PII, such as by:
+
+Wearing masks, sunglasses, or clothing to obscure or completely hide distinguishing features, such as eye, skin, and hair colour, facial features, and personal marks such as tattoos, birthmarks, moles and scars.
+Wearing gloves to conceal fingerprints, which themselves are PII. However, gloves can also leave prints that are just as unique as human fingerprints. After collecting glove prints, law enforcement can then match them to gloves that they have collected as evidence. In many jurisdictions the act of wearing gloves itself while committing a crime can be prosecuted as an inchoate offense.
+Avoiding writing anything in their own handwriting.
+Masking their internet presence with methods such as using a proxy server to appear to be connecting from an IP address unassociated with oneself.
+
+
+== Personal safety ==
+Personal data is a key component of online identity and can be exploited by individuals. For instance, data can be altered and used to create fake documents, hijack mail boxes and phone calls or harass people, as occurred in 2019 to a customer of the EE mobile phone operator in the UK.
+Another category can be referred to as financial identity theft, which usually entails bank account and credit card information being stolen, and then being used or sold.
+Personal data can also be used to create fake online identities, including fake accounts and profiles (which can be referred as identity cloning or identity fraud) for celebrities to gather data from other users more easily. Even individuals can be concerned, especially for personal purposes (this is more widely known as sockpuppetry).
+The most critical information, such as one's password, date of birth, ID documents or social security number, can be used to log in to different websites (e.g. password reuse and account verification) to gather more information and access more content.
+Also, several agencies ask for discretion on subjects related to their work, for the safety of their employees. For this reason, the United States Department of Defense (DoD) has strict policies controlling release of personally identifiable information of DoD personnel. Many intelligence agencies have similar policies, sometimes to the point where employees do not disclose to their friends that they work for the agency.
+Similar identity protection concerns exist for witness protection programs, women's shelters, and victims of domestic violence and other threats.
+
+
+=== Personal information removal ===
+
+
+== Trade of personal data ==
+
+During the second half of the 20th century, the digital revolution introduced "privacy economics", or the trade of personal data. The value of data can change over time and over different contexts. Disclosing data can reverse information asymmetry, though the costs of doing so can be unclear. In relation to companies, consumers often have "imperfect information regarding when their data is collected, with what purposes, and with what consequences".
+Writing in 2015, Alessandro Acquisti, Curtis Taylor and Liad Wagman identified three "waves" in the trade of personal data:
+
+In the 1970s, the Chicago Boys school claimed that protection of privacy could have a negative impact on the market because it could lead to incorrect and non-optimal decisions. Other researchers like Andrew F. Daughety and Jennifer F. Reinganum suggested that the opposite was true, and that absence of privacy would also lead to this.
+In the mid-1990s, Varian retook the Chicago Boys approach and added a new externality, stating that the consumer would not always have perfect information on how their own data would be used. Kenneth C. Laudon developed a model in which individuals own their data and have the ability to sell it as a product. He believed that such a system should not be regulated, to create a free market.
+In the 2000s, researchers worked on price discrimination (Taylor, 2004), two-sided markets (Cornière, 2011) and marketing strategies (Anderson and de Palma, 2012). The theories became complex, and showed that the impact of privacy on the economy highly depended on the context.
+
+
+=== Data brokers ===
+
+
+== See also ==
+
+
+== Notes ==
+
+
+== References ==
+
+
+== External links ==
+Six things you need to know about the new EU privacy framework A legal analysis of the new European regulatory framework about data privacy
+Personal and professional information management
+Power to the People! Giving Citizens their Personal Data Rights Back Archived 10 April 2019 at the Wayback Machine – J Cromack
+Rethinking Personal Data New Lens Report – World Economic Forum
+Why Consent is Different to Marketing Preferences – K Dewar Archived 27 December 2018 at the Wayback Machine

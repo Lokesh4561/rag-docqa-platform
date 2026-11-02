@@ -1,0 +1,27 @@
+Terraform (software)
+
+Terraform is an infrastructure-as-code software tool created by HashiCorp. Users define and provide data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language (HCL), or optionally JSON.
+
+
+== History ==
+Terraform was launched by HashiCorp in 2014. HashiCorp launched the Terraform Module Registry in 2017. In 2019, the paid version Terraform Enterprise was introduced.
+In September 2021, HashiCorp announced it would be temporarily pausing its review of community-submitted pull requests for Terraform, citing low staffing in its Terraform Core team.
+On August 10, 2023, HashiCorp announced that all products produced by the company would be relicensed under the Business Source License (BUSL), with HashiCorp prohibiting commercial use of the community edition by those who offer "competitive services". Terraform was previously free software available under version 2.0 of the Mozilla Public License (MPL). Joe Duffy, founder and CEO of Pulumi, criticized the announcement as "disingenuous" and said, "We tried many times to contribute upstream fixes to Terraform providers, but HashiCorp would never accept them. So we've had to maintain forks."
+In August 2023, due to Terraform's relicensing, the fork OpenTF was created under the MPL. OpenTF was later renamed to OpenTofu and placed under The Linux Foundation.
+
+
+== Features ==
+Terraform manages external resources (such as public cloud infrastructure, private cloud infrastructure, network appliances, software as a service, and platform as a service) with "providers". HashiCorp maintains an extensive list of official providers, and can also integrate with community-developed providers. Users can interact with Terraform providers by declaring resources or by calling data sources. Rather than using imperative commands to provision resources, Terraform uses declarative configuration to describe the desired final state. Once a user invokes Terraform on a given resource, Terraform will perform CRUD actions on the user's behalf to accomplish the desired state. The infrastructure as code can be written as modules, promoting reusability and maintainability.
+Terraform supports a number of cloud infrastructure providers such as Amazon Web Services, Cloudflare, Microsoft Azure, IBM Cloud, Serverspace, Selectel  Google Cloud Platform, Linode, DigitalOcean, Oracle Cloud Infrastructure, Yandex.Cloud, VMware vSphere, and OpenStack. It can be configured to make use of multiple cloud platforms.
+
+
+== See also ==
+AWS Cloud Development Kit
+
+
+== References ==
+
+
+== External links ==
+Official website 
+Terraform on GitHub

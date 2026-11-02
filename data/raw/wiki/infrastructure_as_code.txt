@@ -1,0 +1,61 @@
+Infrastructure as code
+
+Infrastructure as code (IaC) is the process of managing and provisioning computer data center resources through machine-readable definition files, rather than via physical hardware configuration or interactive configuration tools. That is, instead of having to build a configuration manually, there is a pre-set configuration that can be applied to a machine. The IT infrastructure managed by this process includes physical equipment, such as bare-metal servers, and virtual machines and associated configuration resources. The definitions may exist in a version control system rather than manual processes. Definition files may use either scripts or declarative definitions, but IaC more often employs declarative approaches.
+
+
+== History ==
+The concept of managing infrastructure through code emerged from early configuration management practices. In the 1990s, tools such as CFEngine, created by Mark Burgess in 1993, introduced the idea of describing system configuration in a declarative language rather than executing manual commands, laying the intellectual groundwork for IaC.
+
+
+== Overview ==
+IaC emerged as organizations began managing larger and more complex infrastructure, particularly with the growth of cloud computing and the need to provision resources consistently and at scale. Treating infrastructure configuration like software - storing it in version control, reviewing it, and deploying it automatically allowed teams to reduce manual errors and reproduce environments reliably. The ability to treat infrastructure as code and use the same tools as any other software project would allow developers to rapidly deploy applications.
+
+
+== Advantages ==
+The value of IaC can be broken down into three measurable categories: cost, speed, and risk. Cost reduction aims at helping not only the enterprise financially, but also in terms of people and effort, meaning that by removing the manual component, organizations are able to refocus their efforts on other enterprise tasks. Infrastructure automation enables speed through faster execution when configuring your infrastructure and provides visibility to help other teams across the enterprise work quickly and more efficiently. Automation removes the risk associated with human error, like manual misconfiguration; removing this can decrease downtime and increase reliability. These outcomes and attributes help the enterprise move toward implementing a culture of DevOps: the combined work of development and operations.
+
+
+== Types of approaches ==
+There are generally two approaches to IaC: declarative (functional) vs. imperative (procedural). The difference between the declarative and the imperative approach is essentially what versus how. The declarative approach focuses on what the eventual target configuration should be; the imperative focuses on how the infrastructure is to be changed to meet this. The declarative approach defines the desired state and the system executes what needs to happen to achieve that desired state. Imperative defines specific commands that need to be executed in the appropriate order to end with the desired conclusion.
+
+
+== Methods ==
+IaC lets organizations manage servers and their configurations using code. There are two ways to apply these configurations to servers: the 'push' and 'pull' methods. In the 'push' method, the system controlling the configuration directly sends instructions to the server. In the 'pull' method, the server retrieves its own instructions from the controlling system.
+
+
+== Tools ==
+There are many tools that fulfill infrastructure automation capabilities and use IaC. Broadly speaking, any framework or tool that performs changes or configures infrastructure declaratively or imperatively based on a programmatic approach can be considered IaC. Traditionally, server (lifecycle) automation and configuration management tools were used to accomplish IaC. Now enterprises are also using continuous configuration automation tools or stand-alone IaC frameworks, such as Microsoft’s PowerShell DSC, AWS CloudFormation, and StackStorm.
+
+
+=== Continuous configuration automation ===
+All continuous configuration automation (CCA) tools can be thought of as extensions of traditional IaC frameworks. They leverage IaC to change, configure, and automate infrastructure, and they also provide visibility, efficiency, and flexibility in how infrastructure is managed. These additional attributes provide enterprise-level security and compliance.
+
+
+==== Community content ====
+
+Community content is a key determinant of an open-source CCA tool's quality. According to Gartner, the value of CCA tools is "as dependent on user-community-contributed content and support as it is on the commercial maturity and performance of the automation tooling". Established vendors such as Puppet and Chef have created their own communities. Chef has Chef Community Repository and Puppet has PuppetForge. Other vendors rely on adjacent communities and leverage other IaC frameworks such as PowerShell DSC. New vendors are emerging that are not content-driven, but model-driven with the intelligence in the product to deliver content. These visual, object-oriented systems work well for developers, but they are especially useful to production-oriented DevOps and operations constituents that value models versus scripting for content. As the field continues to develop and change, the community-based content will become ever more important to how IaC tools are used, unless they are model-driven and object-oriented.
+
+
+== Relationships ==
+
+
+=== Relationship to DevOps ===
+IaC can be a key attribute of enabling best practices in DevOps. Developers become more involved in defining configuration and Ops teams get involved earlier in the development process. Tools that utilize IaC bring visibility to the state and configuration of servers and ultimately provide the visibility to users within the enterprise, which brings teams together to maximize their efforts. Automation in general aims to take the confusion and error-prone aspect of manual processes and make it more efficient, and productive. Allowing for better software and applications to be created with flexibility, less downtime, and an overall cost-effective way for the company. IaC is intended to improve efficiency by reducing the complexity of manual configurations. Automation and collaboration are considered central points in DevOps; infrastructure automation tools are often included as components of a DevOps toolchain.
+
+
+=== Relationship to security ===
+The 2020 Cloud Threat Report released by Unit 42 (the threat intelligence unit of cybersecurity provider Palo Alto Networks) identified around 200,000 potential vulnerabilities in infrastructure-as-code templates.
+
+
+== See also ==
+Docker (software)
+IT infrastructure
+Infrastructure as a service
+Orchestration (computing)
+Continuous configuration automation
+Landing zone (software)
+GitOps
+Configuration management
+
+
+== References ==

@@ -1,0 +1,129 @@
+Object storage
+
+Object storage (also known as object-based storage or blob storage) is a computer data storage approach that manages data as "blobs" or "objects", as opposed to other storage architectures like file systems, which manage data as a file hierarchy, and block storage, which manages data as blocks within sectors and tracks. Each object is typically associated with a variable amount of metadata, and a globally unique identifier. Object storage can be implemented at multiple levels, including the device level (object-storage device), the system level, and the interface level. In each case, object storage seeks to enable capabilities not addressed by other storage architectures, like interfaces that are directly programmable by the application, a namespace that can span multiple instances of physical hardware, and data-management functions like data replication and data distribution at object-level granularity.
+Object storage systems allow retention of massive amounts of unstructured data in which data is written once and read once (or many times). Object storage is used for purposes such as storing objects like videos and photos on Facebook, songs on Spotify, or files in online collaboration services, such as Dropbox. One of the limitations with object storage is that it is not intended for transactional data, as object storage was not designed to replace NAS file access and sharing; it does not support the locking and sharing mechanisms needed to maintain a single, accurately updated version of a file.
+
+
+== History ==
+
+
+=== Origins ===
+Jim Starkey coined the term blob working at Digital Equipment Corporation to refer to opaque data entities.  The terminology was adopted for Rdb/VMS.  Blob is often humorously explained to be an abbreviation for binary large object.   According to Starkey, this backronym arose when Terry McKiever, working in marketing at Apollo Computer felt that the term needed to be an abbreviation.  McKiever began using the expansion basic large object.  This was later eclipsed by the retroactive explanation of blobs as binary large objects.  According to Starkey, "Blob don't stand for nothin'."  Rejecting the acronym, he explained his motivation behind the coinage, saying, "A blob is the thing that ate Cincinnatti [sic], Cleveland, or whatever", referring to the 1958 science fiction film The Blob.
+In 1995, research led by Garth Gibson on Network-Attached Secure Disks first promoted the concept of splitting less common operations, like namespace manipulations, from common operations, like reads and writes, to optimize the performance and scale of both.  In the same year, a Belgian company – FilePool – was established to build the basis for archiving functions. Object storage was proposed at Gibson's Carnegie Mellon University lab as a research project in 1996.   Another key concept was abstracting the writes and reads of data to more flexible data containers (objects). Fine grained access control through object storage architecture  was further described by one of the NASD team, Howard Gobioff, who later was one of the inventors of the Google File System.
+Other related work includes the Coda filesystem project at Carnegie Mellon, which started in 1987, and spawned the Lustre file system. There is also the OceanStore project at UC Berkeley, which started in 1999 and the Logistical Networking project at the University of Tennessee Knoxville, which started in 1998. In 1999, Gibson founded Panasas to commercialize the concepts developed by the NASD team.
+
+
+=== Development ===
+Seagate Technology played a central role in the development of object storage. According to the Storage Networking Industry Association (SNIA), "Object storage originated in the late 1990s: Seagate specifications from 1999 Introduced some of the first commands and how operating system effectively removed from consumption of the storage."
+A preliminary version of the "OBJECT BASED STORAGE DEVICES Command Set Proposal" dated 10/25/1999 was submitted by Seagate as edited by Seagate's Dave Anderson and was the product of work by the National Storage Industry Consortium (NSIC) including contributions by Carnegie Mellon University, Seagate, IBM, Quantum, and StorageTek. This paper was proposed to INCITS T-10 (International Committee for Information Technology Standards) with a goal to form a committee and design a specification based on the SCSI interface protocol. This defined objects as abstracted data, with unique identifiers and metadata, how objects related to file systems, along with many other innovative concepts. Anderson presented many of these ideas at the SNIA conference in October 1999. The presentation revealed an IP Agreement that had been signed in February 1997 between the original collaborators (with Seagate represented by Anderson and Chris Malakapalli) and covered the benefits of object storage, scalable computing, platform independence, and storage management.
+
+
+== Architecture ==
+
+
+=== Abstraction of storage ===
+One of the design principles of object storage is to abstract some of the lower layers of storage away from the administrators and applications. Thus, data is exposed and managed as objects instead of blocks or (exclusively) files. Objects contain additional descriptive properties which can be used for better indexing or management. Administrators do not have to perform lower-level storage functions like constructing and managing logical volumes to utilize disk capacity or setting RAID levels to deal with disk failure.
+Object storage also allows the addressing and identification of individual objects by more than just file name and file path. Object storage adds a unique identifier within a bucket, or across the entire system, to support much larger namespaces and eliminate name collisions.
+
+
+=== Inclusion of rich custom metadata within the object ===
+Object storage explicitly separates file metadata from data to support additional capabilities.
+As opposed to fixed metadata in file systems (filename, creation date, type, etc.), object storage provides for full function, custom, object-level metadata in order to:
+
+Capture application-specific or user-specific information for better indexing purposes
+Support data-management policies (e.g. a policy to drive object movement from one storage tier to another)
+Centralize management of storage across many individual nodes and clusters
+Optimize metadata storage (e.g. encapsulated, database or key value storage) and caching/indexing (when authoritative metadata is encapsulated with the metadata inside the object) independently from the data storage (e.g. unstructured binary storage)
+Additionally, in some object-based file-system implementations:
+
+The file system clients only contact metadata servers once when the file is opened and then get content directly via object-storage servers (vs. block-based file systems which would require constant metadata access)
+Data objects can be configured on a per-file basis to allow adaptive stripe width, even across multiple object-storage servers, supporting optimizations in bandwidth and I/O
+Object-based storage devices (OSD) as well as some software implementations (e.g., DataCore Swarm) manage metadata and data at the storage device level:
+
+Instead of providing a block-oriented interface that reads and writes fixed sized blocks of data, data is organized into flexible-sized data containers, called objects
+Each object has both data (an uninterpreted sequence of bytes) and metadata (an extensible set of attributes describing the object); physically encapsulating both together benefits recoverability.
+The command interface includes commands to create and delete objects, write bytes and read bytes to and from individual objects, and to set and get attributes on objects
+Security mechanisms provide per-object and per-command access control
+
+
+=== Programmatic data management ===
+Object storage provides programmatic interfaces to allow applications to manipulate data. At the base level, this includes Create, read, update and delete (CRUD) functions for basic read, write and delete operations. Some object storage implementations go further, supporting additional functionality like object/file versioning, object replication, life-cycle management and movement of objects between different tiers and types of storage. Most API implementations are REST-based, allowing the use of many standard HTTP calls.
+
+
+== Implementation ==
+
+
+=== Cloud storage ===
+
+The vast majority of cloud storage available in the market leverages an object-storage architecture. Some notable examples are Amazon S3, which debuted in March 2006, Microsoft Azure Blob Storage, IBM Cloud Object Storage, Rackspace Cloud Files (whose code was donated in 2010 to Openstack project and released as OpenStack Swift), and Google Cloud Storage released in May 2010.
+
+
+=== Object-based file systems ===
+Some distributed file systems use an object-based architecture, where file metadata is stored in metadata servers and file data is stored in object storage servers. File system client software interacts with the distinct servers, and abstracts them to present a full file system to users and applications.
+
+
+=== Object-storage systems ===
+Some early incarnations of object storage were used for archiving, as implementations were optimized for data services like immutability, not performance. EMC Centera and Hitachi HCP (formerly known as HCAP) are two commonly cited object storage products for archiving. Another example is Quantum ActiveScale Object Storage Platform.
+More general-purpose object-storage systems came to market around 2008. Lured by the incredible growth of "captive" storage systems within web applications like Yahoo Mail and the early success of cloud storage, object-storage systems promised the scale and capabilities of cloud storage, with the ability to deploy the system within an enterprise, or at an aspiring cloud-storage service provider.
+
+
+=== Unified file and object storage ===
+A few object-storage systems support Unified File and Object storage, allowing clients to store objects on a storage system while simultaneously other clients store files on the same storage system. Other vendors in the area of Hybrid cloud storage are using Cloud storage gateways to provide a file access layer over object storage, implementing file access protocols such as SMB and NFS.
+
+
+=== "Captive" object storage ===
+Some large Internet companies developed their own software when object-storage products were not commercially available or use cases were very specific. Facebook famously invented their own object-storage software, code-named Haystack, to address their particular massive-scale photo management needs efficiently.
+
+
+=== Object-based storage devices ===
+Object storage at the protocol and device layer was proposed 20 years ago and approved for the SCSI command set nearly 10 years ago as "Object-based Storage Device Commands" (OSD), however, it had not been put into production until the development of the Seagate Kinetic Open Storage platform.  The SCSI command set for Object Storage Devices was developed by a working group of the SNIA for the T10 committee of the International Committee for Information Technology Standards (INCITS).  T10 is responsible for all SCSI standards.
+
+
+== Market adoption ==
+One of the first object-storage products, Lustre, is used in 70% of the Top 100 supercomputers and ~50% of the Top 500. As of 16 June 2013, this includes 7 of the top 10, including the current fourth fastest system on the list - China's Tianhe-2 and the seventh fastest, the Titan supercomputer at the Oak Ridge National Laboratory.
+Object-storage systems had good adoption in the early 2000s as an archive platform, particularly in the wake of compliance laws like Sarbanes-Oxley. After five years in the market, EMC's Centera product claimed over 3,500 customers and 150 petabytes shipped by 2007. Hitachi's HCP product also claims many petabyte-scale customers. Newer object storage systems have also gotten some traction, particularly around very large custom applications like eBay's auction site, where EMC Atmos is used to manage over 500 million objects a day. As of 3 March 2014, EMC claims to have sold over 1.5 exabytes of Atmos storage. On July 1, 2014, Los Alamos National Lab chose the Scality RING as the basis for a 500-petabyte storage environment, which would be among the largest ever.
+"Captive" object storage systems like Facebook's Haystack have scaled impressively. In April 2009, Haystack was managing 60 billion photos and 1.5 petabytes of storage, adding 220 million photos and 25 terabytes a week. Facebook more recently  stated that they were adding 350 million photos a day and were storing 240 billion photos. This could equal as much as 357 petabytes.
+Cloud storage has become pervasive as many new web and mobile applications choose it as a common way to store binary data.  As the storage back-end to many popular applications like Smugmug and Dropbox, Amazon S3 has grown to massive scale, citing over 2-trillion objects stored in April 2013. Two months later, Microsoft claimed that they stored even more objects in Azure at 8.5 trillion. By April 2014, Azure claimed over 20-trillion objects stored. Windows Azure Storage manages Blobs (user files), Tables (structured storage), and Queues (message delivery) and counts them all as objects.
+
+
+== Market analysis ==
+Coldago Research which publishes an annual evaluation report of the object storage in its 2024 report titled Coldago Research Map 2024 for Object Storage, gave an insight into innovations, market dynamics and future direction of object storage characterized by its rapid evolution, growing adoption, and expanding set of enterprise use cases. Coldago Research adopted qualitative and quantitative analysis of the object storage market to rank 13 notable vendors based on technological capabilities, market momentum, and innovation trajectory.
+The 2024 Coldago object storage market leader rating is in alphabetical order: Cloudian, DataCore, Dell EMC, Huawei, IBM, MinIO, Pure Storage, Quantum, and VAST Data.
+
+
+== Standards ==
+
+
+=== Object-based storage device standards ===
+
+
+==== OSD version 1 ====
+In the first version of the OSD standard, objects are specified with a 64-bit partition ID and a 64-bit object ID. Partitions are created and deleted within an OSD, and objects are created and deleted within partitions. There are no fixed sizes associated with partitions or objects; they are allowed to grow subject to physical size limitations of the device or logical quota constraints on a partition.
+An extensible set of attributes describe objects. Some attributes are implemented directly by the OSD, such as the number of bytes in an object and the modification time of an object. There is a special policy tag attribute that is part of the security mechanism. Other attributes are uninterpreted by the OSD. These are set on objects by the higher-level storage systems that use the OSD for persistent storage. For example, attributes might be used to classify objects, or to capture relationships among different objects stored on different OSDs.
+A list command returns a list of identifiers for objects within a partition, optionally filtered by matches against their attribute values. A list command can also return selected attributes of the listed objects.
+Read and write commands can be combined, or piggy-backed, with commands to get and set attributes. This ability reduces the number of times a high-level storage system has to cross the interface to the OSD, which can improve overall efficiency.
+
+
+==== OSD version 2 ====
+A second generation of the SCSI command set, "Object-Based Storage Devices - 2" (OSD-2) added support for snapshots, collections of objects, and improved error handling.
+A snapshot is a point-in-time copy of all the objects in a partition into a new partition. The OSD can implement a space-efficient copy using copy-on-write techniques so that the two partitions share objects that are unchanged between the snapshots, or the OSD might physically copy the data to the new partition. The standard defines clones, which are writeable, and snapshots, which are read-only.
+A collection is a special kind of object that contains the identifiers of other objects. There are operations to add and delete from collections, and there are operations to get or set attributes for all the objects in a collection. Collections are also used for error reporting.  If an object becomes damaged by the occurrence of a media defect (i.e., a bad spot on the disk) or by a software error within the OSD implementation, its identifier is put into a special error collection. The higher-level storage system that uses the OSD can query this collection and take corrective action as necessary.
+
+
+== Differences between key–value and object stores ==
+The border between an object store and a key–value store is blurred, with key–value stores being sometimes loosely referred to as object stores.
+A traditional block storage interface uses a series of fixed size blocks which are numbered starting at 0. Data must be that exact fixed size and can be stored in a particular block which is identified by its logical block number (LBN). Later, one can retrieve that block of data by specifying its unique LBN.
+With a key–value store, data is identified by a key rather than a LBN. A key might be "cat" or "olive" or "42". It can be an arbitrary sequence of bytes of arbitrary length. Data (called a value in this parlance) does not need to be a fixed size and also can be an arbitrary sequence of bytes of arbitrary length. One stores data by presenting the key and data (value) to the data store and can later retrieve the data by presenting the key. This concept is seen in programming languages. Python calls them dictionaries, Perl calls them hashes, Java, Rust and C++ call them maps, etc. Several data stores also implement key–value stores such as Memcached, Redis and CouchDB.
+Object stores are similar to key–value stores in two respects. First, the object identifier or URL (the equivalent of the key) can be an arbitrary string. Second, data may be of an arbitrary size.
+There are, however, a few key differences between key–value stores and object stores. First, object stores also allow one to associate a limited set of attributes (metadata) with each piece of data. The combination of a key, value, and set of attributes is referred to as an object. Second, object stores are optimized for large amounts of data (hundreds of megabytes or even gigabytes), whereas for key–value stores the value is expected to be relatively small (kilobytes). Finally, object stores usually offer weaker consistency guarantees such as eventual consistency, whereas key–value stores offer strong consistency.
+
+
+== See also ==
+Block storage
+File storage
+Cloud storage
+Clustered file system
+Object access method
+
+
+== References ==

@@ -1,0 +1,33 @@
+Data lake
+
+A data lake is a system or repository of data stored in its natural, raw format, usually object blobs or files. A data lake is usually a single store of data including raw copies of source system data, sensor data, social data etc., and transformed data used for tasks such as reporting, visualization, advanced analytics, and machine learning. A data lake can include structured data from relational databases (rows and columns), semi-structured data (CSV, logs, XML, JSON), unstructured data (emails, documents, PDFs), and binary data (images, audio, video). A data lake can be established on premises (within an organization's data centers) or in the cloud (using cloud services).
+
+
+== Background ==
+James Dixon, then chief technology officer at Pentaho, coined the term by 2011 to contrast it with data mart, which is a smaller repository of interesting attributes derived from raw data. In promoting data lakes, he argued that data marts have several inherent problems, such as information siloing. PricewaterhouseCoopers (PwC) said that data lakes could "put an end to data silos". In their study on data lakes, they noted that enterprises were "starting to extract and place data for analytics into a single, Hadoop-based repository."
+
+
+== Examples ==
+Many companies use cloud storage services such as Google Cloud Storage and  Amazon S3 or a distributed file system such as  Apache Hadoop distributed file system (HDFS). There is a gradual academic interest in the concept of data lakes.  For example, Personal DataLake at Cardiff University is a new type of data lake which aims at managing big data of individual users by providing a single point of collecting, organizing, and sharing personal data. 
+Early data lakes, such as Hadoop 1.0, had limited capabilities because it only supported batch-oriented processing (Map Reduce). Interacting with it required expertise in Java, map reduce and higher-level tools like Apache Pig, Apache Spark and Apache Hive (which were also originally batch-oriented).
+
+
+== Criticism ==
+Poorly managed data lakes have been facetiously called data swamps.
+In June 2015, David Needle characterized "so-called data lakes" as "one of the more controversial ways to manage big data". PwC was also careful to note in their research that not all data lake initiatives are successful. They quote Sean Martin, CTO of Cambridge Semantics:
+
+We see customers creating big data graveyards, dumping everything into Hadoop distributed file system (HDFS) and hoping to do something with it down the road. But then they just lose track of what’s there. The main challenge is not creating a data lake, but taking advantage of the opportunities it presents.
+They describe companies that build successful data lakes as gradually maturing their lake as they figure out which data and metadata are important to the organization. 
+Another criticism is that the term data lake is used with many different meanings. It may be used to refer to, for example: any tools or data management practices that are not data warehouses; a particular technology for implementation; a raw data reservoir; a hub for ETL offload; or a central hub for self-service analytics. 
+While critiques of data lakes are warranted, in many cases they apply to other data projects as well. For example, the definition of data warehouse is also changeable, and not all data warehouse efforts have been successful. In response to various critiques, McKinsey noted that the data lake should be viewed as a service model for delivering business value within the enterprise, not a technology outcome.
+
+
+== Data lakehouses ==
+Data lakehouses are a hybrid approach that can ingest a variety of raw data formats like a data lake, while also providing ACID transactions and enforced data quality like a data warehouse.
+
+
+== See also ==
+Azure Data Lake
+
+
+== References ==

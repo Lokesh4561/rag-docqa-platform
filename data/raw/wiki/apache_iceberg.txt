@@ -1,0 +1,28 @@
+Apache Iceberg
+
+Apache Iceberg is a high-performance open-source format for large analytic tables. Iceberg enables the use of SQL tables for big data while making it possible for engines like Spark, Trino, Flink, Presto, Hive, Impala, and Pig to safely work with the same tables, at the same time. Iceberg is released under the Apache License. Iceberg addresses the performance and usability challenges of Apache Hive tables in large and demanding data lake environments. Iceberg was originally developed at Netflix in 2017 to overcome scalability and consistency limitations of Apache Hive tables, and was donated to the Apache Software Foundation in 2018. It graduated to a top-level Apache project in 2020. Vendors that support Apache Iceberg tables include Cloudera, IBM Watsonx, Oracle, Snowflake, Teradata, AWS, Google Cloud, and Databricks.
+
+
+== History ==
+Iceberg was started at Netflix by Ryan Blue and Dan Weeks. Apache Hive was used by many different services and engines in the Netflix infrastructure. Hive was never able to guarantee correctness and did not provide stable atomic transactions. Many at Netflix avoided using these services and making changes to the data to avert unintended consequences from the Hive format. Ryan Blue set out to address three issues that faced the Hive table by creating Iceberg:
+
+Ensure the correctness of the data and support ACID transactions.
+Improve performance by enabling finer-grained operations to be done at the file granularity for optimal writes.
+Simplify and abstract general operation and maintenance of tables.
+Iceberg development started in 2017. The project was open-sourced and donated to the Apache Software Foundation in November 2018. In May 2020, the Iceberg project graduated to become a top-level Apache project.
+Iceberg is used by multiple companies including Airbnb, Apple, Expedia, LinkedIn, Adobe, Lyft.
+
+
+== Technical details ==
+Apache Iceberg operates by abstracting table metadata from the underlying data storage. It maintains metadata files that track snapshots, schema information, partition layouts, and data file locations, enabling efficient and atomic table operations.
+At a high level, Iceberg organizes table data into snapshots. Each snapshot represents the state of the table at a particular point in time, allowing Iceberg to provide ACID-compliant transactional capabilities, including snapshot isolation, concurrent writes, and rollback functionality. The snapshot metadata is managed as a tree structure of manifest files and metadata files stored within the file system.
+Iceberg uses the Apache Parquet file format for storing actual data due to its efficient columnar storage structure, optimized for analytical queries. Parquet files in Iceberg store table rows in a compressed, column-oriented format, significantly reducing storage costs and improving read performance through techniques such as predicate pushdown and column pruning. Iceberg references Parquet files in manifest files, facilitating quick identification and access to relevant data during query execution.
+Apache Iceberg employs a multi‐level metadata hierarchy for tracking table contents. At the top, a table metadata file (often metadata.json) stores table-level information—such as the schema, partition specifications, the list of snapshots, and pointers to the current "root" snapshot. Each snapshot represents a consistent view of the table and is associated with a manifest list (an Avro file) that enumerates all manifest files for that snapshot. A manifest file is an index that lists a set of data files (e.g., Parquet files) along with metadata about each file – including row count, partition values, and column statistics such as minimum and maximum values. These manifests are small metadata files (often in Avro format) that segment the table’s metadata, enabling a distributed design whereby entire manifests can be pruned when querying by partition instead of requiring a single, giant file listing all data files. Moreover, Iceberg’s metadata tree provides an historic record of table changes—retaining old snapshots and manifests (thus enabling time travel) until they expire—and it can quickly plan queries by reading only the relevant manifest files rather than scanning all data files or directories. This approach avoids expensive operations such as directory listing and makes metadata access efficient even for huge tables.
+
+
+== See also ==
+
+List of Apache Software Foundation projects
+
+
+== References ==

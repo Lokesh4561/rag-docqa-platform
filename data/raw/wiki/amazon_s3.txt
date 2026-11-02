@@ -1,0 +1,70 @@
+Amazon S3
+
+Amazon Simple Storage Service (S3) is a service offered by Amazon Web Services (AWS) that provides object storage through a web service interface. Amazon S3 uses the same scalable storage infrastructure that Amazon.com uses to run its e-commerce network. Amazon S3 can store any type of object, which allows uses like storage for Internet applications, backups, disaster recovery, data archives, data lakes for analytics, and hybrid cloud storage. AWS launched Amazon S3 in the United States on March 14, 2006, then in Europe in November 2007.
+
+
+== Technical details ==
+
+
+=== Design ===
+Amazon S3 manages data with an object storage architecture which aims to provide scalability, high availability, and low latency with high durability. The basic storage units of Amazon S3 are objects which are organized into buckets. Each object is identified by a unique, user-assigned key. Buckets can be managed using the console provided by Amazon S3, programmatically with the AWS SDK, or the REST application programming interface. Objects can be up to five terabytes in size. Requests are authorized using an access control list associated with each object bucket and support versioning which is disabled by default. Amazon S3 can be used to replace static web-hosting infrastructure with HTTP client-accessible objects, index document support, and error document support.
+The Amazon AWS authentication mechanism allows the creation of authenticated URLs, valid for a specified amount of time. Every item in a bucket can also be served as a BitTorrent feed. The Amazon S3 store can act as a seed host for a torrent and any BitTorrent client can retrieve the file. This can drastically reduce the bandwidth cost for the download of popular objects. A bucket can be configured to save HTTP log information to a sibling bucket; this can be used in data mining operations.
+Various User Mode File System (FUSE)–based file systems for Linux or other Unix-like operating systems can be used to mount an S3 bucket as a file system. The semantics of the Amazon S3 file system are not that of a POSIX file system, so the file system may not behave entirely as expected. Implementations include Rclone and AWS's own Mountpoint for S3.
+
+
+=== Amazon S3 storage classes ===
+Amazon S3 offers nine different storage classes with different levels of durability, availability, and performance requirements.
+
+Amazon S3 Standard is the default. It is general purpose storage for frequently accessed data.
+Amazon S3 Express One Zone is a single-digit millisecond latency storage for frequently accessed data and latency-sensitive applications. It stores data only in one availability zone.
+The Amazon S3 Glacier storage classes above are distinct from Amazon Glacier, which is a separate product with its own APIs.
+
+
+=== File size limits ===
+An object in S3 can be between 0 bytes and 5 TB. If an object is larger than 5 GB, it must be divided into chunks prior to uploading. When uploading, Amazon S3 allows a maximum of 5 GB in a single upload operation; hence, objects larger than 5 GB must be uploaded via the S3 multipart upload API.
+
+
+=== Scale ===
+As of 2025, S3 stores 500 trillion objects, 100s of exabytes of data, serves 200 million requests per second, and peaks at about 1 petabyte per second in bandwidth.
+
+
+== Uses ==
+
+
+=== Notable users ===
+Photo hosting service SmugMug has used Amazon S3 since April 2006. They experienced a number of initial outages and slowdowns, but after one year they described it as being "considerably more reliable than our own internal storage" and claimed to have saved almost $1 million in storage costs.
+Netflix uses Amazon S3 as their system of record. Netflix implemented a tool, S3mper, to address the Amazon S3 limitations of eventual consistency. S3mper stores the filesystem metadata: filenames, directory structure, and permissions in Amazon DynamoDB.
+Reddit is hosted on Amazon S3.
+Bitcasa, and Tahoe-LAFS-on-S3, among others, use Amazon S3 for online backup and synchronization services. In 2016, Dropbox stopped using Amazon S3 services and developed its own cloud server.
+Swiftype's CEO has mentioned that the company uses Amazon S3.
+
+
+== S3 API and competing services ==
+The broad adoption of Amazon S3 and related tooling has given rise to competing services based on the S3 API. These services use the standard programming interface but are differentiated by their underlying technologies and business models. A standard interface enables better competition from rival providers and allows economies of scale in implementation, among other benefits. Users are not required to go directly to Amazon as several storage providers such as Cloudian, Backblaze B2, Wasabi offer S3-compatible storage with options of on-premises and private cloud deployments. Several open-source implementations of S3-compatible object store servers can be self-hosted, such as Garage. IBM Cloud Object Storage also offers a cloud-based S3-compatible option of Object Storage.
+
+
+== History ==
+
+Amazon Web Services introduced Amazon S3 in 2006.
+
+In November 2017, AWS added optional default encryption capabilities at bucket level.
+
+
+== See also ==
+Amazon Elastic Block Store (EBS)
+Timeline of Amazon Web Services
+
+
+== References ==
+
+
+=== Citations ===
+
+
+=== Sources ===
+
+
+== External links ==
+Open Source Alternatives To Amazon S3
+European alternatives to Amazon S3
+Amazon S3 Alternatives for Modern Cloud Storage
